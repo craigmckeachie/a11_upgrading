@@ -16,13 +16,19 @@
         </select>
       </p>
 
+      <p>
+        <!-- Angular Component -->
+        <app-widget></app-widget>
+      </p>
     </div>
     <div class="col-md-10">
       <!--Body content-->
 
       <ul class="phones">
-        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-            class="thumbnail phone-list-item">
+        <li
+          ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
+          class="thumbnail phone-list-item"
+        >
           <a href="#!/phones/{{phone.id}}" class="thumb">
             <img ng-src="angularjs/{{phone.imageUrl}}" alt="{{phone.name}}" />
           </a>
@@ -30,7 +36,6 @@
           <p>{{phone.snippet}}</p>
         </li>
       </ul>
-
     </div>
   </div>
 </div>
