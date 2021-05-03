@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Upgrading</title>
+    <base href="/" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+    <link
+      rel="stylesheet"
+      href="./angularjs/bower_components/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./angularjs/app.css" />
+    <link rel="stylesheet" href="./angularjs/app.animations.css" />
+
+    <script src="./angularjs/bower_components/jquery/dist/jquery.js"></script>
+    <script src="./angularjs/bower_components/angular/angular.js"></script>
+    <script src="./angularjs/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./angularjs/bower_components/angular-resource/angular-resource.js"></script>
+    <script src="./angularjs/bower_components/angular-route/angular-route.js"></script>
+    <script src="./angularjs/app.module.js"></script>
+    <script src="./angularjs/app.config.js"></script>
+    <script src="./angularjs/app.animations.js"></script>
+    <script src="./angularjs/core/core.module.js"></script>
+    <script src="./angularjs/core/checkmark/checkmark.filter.js"></script>
+    <script src="./angularjs/core/phone/phone.module.js"></script>
+    <script src="./angularjs/core/phone/phone.service.js"></script>
+    <script src="./angularjs/phone-list/phone-list.module.js"></script>
+    <script src="./angularjs/phone-list/phone-list.component.js"></script>
+    <script src="./angularjs/phone-detail/phone-detail.module.js"></script>
+    <script src="./angularjs/phone-detail/phone-detail.component.js"></script>
+  </head>
+  <body ng-app="phonecatApp">
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
+    <app-root></app-root>
+  </body>
+</html>
