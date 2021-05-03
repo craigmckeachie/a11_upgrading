@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
 import { WidgetComponent } from './widget/widget.component';
+import { phoneServiceProvider } from './phones/shared/phone.service';
+
 
 declare var angular: any;
 
@@ -15,7 +17,7 @@ angular
   declarations: [AppComponent, WidgetComponent],
   imports: [BrowserModule, UpgradeModule],
   entryComponents: [WidgetComponent],
-  providers: [],
+  providers: [phoneServiceProvider],
   // bootstrap: [AppComponent],
 })
 export class AppModule {
