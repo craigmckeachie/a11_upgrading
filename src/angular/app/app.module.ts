@@ -6,7 +6,6 @@ import { UpgradeModule, downgradeComponent } from '@angular/upgrade/static';
 import { WidgetComponent } from './widget/widget.component';
 import { phoneServiceProvider } from './phones/shared/phone.service';
 
-
 declare var angular: any;
 
 angular
@@ -18,12 +17,6 @@ angular
   imports: [BrowserModule, UpgradeModule],
   entryComponents: [WidgetComponent],
   providers: [phoneServiceProvider],
-  // bootstrap: [AppComponent],
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-  constructor(private upgrade: UpgradeModule) {}
-
-  ngDoBootstrap() {
-    this.upgrade.bootstrap(document.body, ['phonecatApp'], { strictDi: true });
-  }
-}
+export class AppModule {}
