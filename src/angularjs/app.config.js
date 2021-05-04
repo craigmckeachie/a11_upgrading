@@ -1,11 +1,8 @@
 'use strict';
 
 angular.module('phonecatApp').config([
-  '$locationProvider',
   '$routeProvider',
-  function config($locationProvider, $routeProvider) {
-    $locationProvider.hashPrefix('!');
-
+  function config($routeProvider) {
     $routeProvider
       .when('/phones', {
         template: '<phone-list></phone-list>',
@@ -13,9 +10,6 @@ angular.module('phonecatApp').config([
       .when('/phones/:phoneId', {
         template: '<phone-detail></phone-detail>',
       })
-      .when('/widget', {
-        template: '<app-widget></app-widget>',
-      })
-      .otherwise('/phones');
+      .otherwise({ template: '' });
   },
 ]);
